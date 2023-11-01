@@ -767,7 +767,11 @@ float UALSCharacterAnimInstance::CalculateDiagonalScaleAmount() const
 	// Calculate the Diagonal Scale Amount. This value is used to scale the Foot IK Root bone to make the Foot IK bones
 	// cover more distance on the diagonal blends. Without scaling, the feet would not move far enough on the diagonal
 	// direction due to the linear translational blending of the IK bones. The curve is used to easily map the value.
-	return DiagonalScaleAmountCurve->GetFloatValue(FMath::Abs(VelocityBlend.F + VelocityBlend.B));
+	if (ensure(IsValid(DiagonalScaleAmountCurve)))
+	{
+		return DiagonalScaleAmountCurve->GetFloatValue(FMath::Abs(VelocityBlend.F + VelocityBlend.B));
+	}
+	return 0.0f;
 }
 
 float UALSCharacterAnimInstance::CalculateCrouchingPlayRate() const
