@@ -14,7 +14,7 @@
  * Character early blend out anim state
  */
 UCLASS()
-class ALSV4_CPP_API UALSNotifyStateEarlyBlendOut : public UAnimNotifyState
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSNotifyStateEarlyBlendOut : public UAnimNotifyState
 {
 	GENERATED_BODY()
 

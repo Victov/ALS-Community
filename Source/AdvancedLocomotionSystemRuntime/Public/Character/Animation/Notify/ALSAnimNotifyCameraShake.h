@@ -15,7 +15,7 @@ class UCameraShakeBase;
  * Generic camera shake animation notify for pawns with controller enabled
  */
 UCLASS()
-class ALSV4_CPP_API UALSAnimNotifyCameraShake : public UAnimNotify
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSAnimNotifyCameraShake : public UAnimNotify
 {
 	GENERATED_BODY()
 

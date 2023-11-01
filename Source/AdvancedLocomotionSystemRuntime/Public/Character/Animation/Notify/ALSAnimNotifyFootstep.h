@@ -17,7 +17,7 @@ class UDataTable;
  * Character footstep anim notify
  */
 UCLASS()
-class ALSV4_CPP_API UALSAnimNotifyFootstep : public UAnimNotify
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSAnimNotifyFootstep : public UAnimNotify
 {
 	GENERATED_BODY()
 

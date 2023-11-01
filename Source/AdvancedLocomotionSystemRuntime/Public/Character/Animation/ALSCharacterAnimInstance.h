@@ -21,7 +21,7 @@ class UCurveVector;
  * Main anim instance class for character
  */
 UCLASS(Blueprintable, BlueprintType)
-class ALSV4_CPP_API UALSCharacterAnimInstance : public UAnimInstance
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSCharacterAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
 

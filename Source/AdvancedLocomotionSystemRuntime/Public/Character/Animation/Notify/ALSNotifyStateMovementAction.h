@@ -14,7 +14,7 @@
  * 
  */
 UCLASS()
-class ALSV4_CPP_API UALSNotifyStateMovementAction : public UAnimNotifyState
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSNotifyStateMovementAction : public UAnimNotifyState
 {
 	GENERATED_BODY()
 

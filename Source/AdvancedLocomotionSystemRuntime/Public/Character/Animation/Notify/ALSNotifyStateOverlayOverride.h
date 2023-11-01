@@ -12,7 +12,7 @@
  * 
  */
 UCLASS()
-class ALSV4_CPP_API UALSNotifyStateOverlayOverride : public UAnimNotifyState
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSNotifyStateOverlayOverride : public UAnimNotifyState
 {
 	GENERATED_BODY()
 
