@@ -826,10 +826,9 @@ float UALSCharacterAnimInstance::CalculateLandPrediction() const
 		                                                5.0f);
 	}
 
-	if (Character->GetCharacterMovement()->IsWalkable(HitResult))
+	if (Character->GetCharacterMovement()->IsWalkable(HitResult) && ensure(IsValid(LandPredictionCurve)))
 	{
-		return FMath::Lerp(LandPredictionCurve->GetFloatValue(HitResult.Time), 0.0f,
-		                   GetCurveValue(NAME_Mask_LandPrediction));
+		return FMath::Lerp(LandPredictionCurve->GetFloatValue(HitResult.Time), 0.0f, GetCurveValue(NAME_Mask_LandPrediction));
 	}
 
 	return 0.0f;
