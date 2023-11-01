@@ -494,11 +494,17 @@ void AALSBaseCharacter::SetActorLocationAndTargetRotation(FVector NewLocation, F
 
 void AALSBaseCharacter::SetMovementModel()
 {
-	const FString ContextString = GetFullName();
-	FALSMovementStateSettings* OutRow =
-		MovementModel.DataTable->FindRow<FALSMovementStateSettings>(MovementModel.RowName, ContextString);
-	check(OutRow);
-	MovementData = *OutRow;
+	if (ensureMsgf(!MovementModel.IsNull(), TEXT("Did you forget to fill in MovementModel information?")))
+	{
+		const FString ContextString = GetFullName();
+		FALSMovementStateSettings* OutRow =	MovementModel.DataTable->FindRow<FALSMovementStateSettings>(MovementModel.RowName, ContextString);
+		if (ensureMsgf(OutRow, TEXT("Failed to find row")))
+		{
+			MovementData = *OutRow;
+			return;
+		}
+	}
+	MovementData = {};
 }
 
 void AALSBaseCharacter::ForceUpdateCharacterState()
