@@ -841,12 +841,14 @@ FALSLeanAmount UALSCharacterAnimInstance::CalculateAirLeanAmount() const
 	// The Lean In Air curve gets the Fall Speed and is used as a multiplier to smoothly reverse the leaning direction
 	// when transitioning from moving upwards to moving downwards.
 	FALSLeanAmount CalcLeanAmount;
-	const FVector& UnrotatedVel = CharacterInformation.CharacterActorRotation.UnrotateVector(
-		CharacterInformation.Velocity) / 350.0f;
-	FVector2D InversedVect(UnrotatedVel.Y, UnrotatedVel.X);
-	InversedVect *= LeanInAirCurve->GetFloatValue(InAir.FallSpeed);
-	CalcLeanAmount.LR = InversedVect.X;
-	CalcLeanAmount.FB = InversedVect.Y;
+	if (ensure(LeanInAirCurve))
+	{
+		const FVector& UnrotatedVel = CharacterInformation.CharacterActorRotation.UnrotateVector(CharacterInformation.Velocity) / 350.0f;
+		FVector2D InversedVect(UnrotatedVel.Y, UnrotatedVel.X);
+		InversedVect *= LeanInAirCurve->GetFloatValue(InAir.FallSpeed);
+		CalcLeanAmount.LR = InversedVect.X;
+		CalcLeanAmount.FB = InversedVect.Y;
+	}
 	return CalcLeanAmount;
 }
 
