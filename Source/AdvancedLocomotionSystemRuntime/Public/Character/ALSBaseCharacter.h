@@ -27,7 +27,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FRagdollStateChangedSignature, bool,
  * Base character class
  */
 UCLASS(BlueprintType)
-class ALSV4_CPP_API AALSBaseCharacter : public ACharacter
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API AALSBaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 

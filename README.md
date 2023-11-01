@@ -1,3 +1,11 @@
+# This fork
+ORIGINAL README CONTENTS BELOW
+
+This fork roughly contains the following modifications:
+- Bring plugin up to date for UE5.3
+- Improve code quality/readability by removing abbreviations and/or useless information where applicable.
+
+
 # Advanced Locomotion System - Community Version
 ![image](https://github.com/dyanikoglu/ALS-Community/raw/main/Resources/Readme_Content_2.gif)
 

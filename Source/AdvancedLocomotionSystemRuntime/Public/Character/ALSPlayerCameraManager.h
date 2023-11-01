@@ -15,7 +15,7 @@ class AALSBaseCharacter;
  * Player camera manager class
  */
 UCLASS(Blueprintable, BlueprintType)
-class ALSV4_CPP_API AALSPlayerCameraManager : public APlayerCameraManager
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API AALSPlayerCameraManager : public APlayerCameraManager
 {
 	GENERATED_BODY()
 

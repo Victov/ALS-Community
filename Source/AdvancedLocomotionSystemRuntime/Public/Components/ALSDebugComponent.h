@@ -13,7 +13,7 @@ class AALSBaseCharacter;
 class USkeletalMesh;
 
 UCLASS(Blueprintable, BlueprintType)
-class ALSV4_CPP_API UALSDebugComponent : public UActorComponent
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSDebugComponent : public UActorComponent
 {
 	GENERATED_BODY()
 

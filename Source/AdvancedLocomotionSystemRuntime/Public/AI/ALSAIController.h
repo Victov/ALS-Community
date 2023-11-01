@@ -13,7 +13,7 @@
  * 
  */
 UCLASS()
-class ALSV4_CPP_API AALSAIController : public AAIController
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API AALSAIController : public AAIController
 {
 	GENERATED_BODY()
 

@@ -13,11 +13,11 @@
  * Authoritative networked Character Movement
  */
 UCLASS()
-class ALSV4_CPP_API UALSCharacterMovementComponent : public UCharacterMovementComponent
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSCharacterMovementComponent : public UCharacterMovementComponent
 {
 	GENERATED_UCLASS_BODY()
 
-	class ALSV4_CPP_API FSavedMove_My : public FSavedMove_Character
+	class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API FSavedMove_My : public FSavedMove_Character
 	{
 	public:
 
@@ -34,7 +34,7 @@ class ALSV4_CPP_API UALSCharacterMovementComponent : public UCharacterMovementCo
 		EALSGait SavedAllowedGait = EALSGait::Walking;
 	};
 
-	class ALSV4_CPP_API FNetworkPredictionData_Client_My : public FNetworkPredictionData_Client_Character
+	class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API FNetworkPredictionData_Client_My : public FNetworkPredictionData_Client_Character
 	{
 	public:
 		FNetworkPredictionData_Client_My(const UCharacterMovementComponent& ClientMovement);

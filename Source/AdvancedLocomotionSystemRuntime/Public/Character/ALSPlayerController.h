@@ -15,7 +15,7 @@ class UInputMappingContext;
  * Player controller class
  */
 UCLASS(Blueprintable, BlueprintType)
-class ALSV4_CPP_API AALSPlayerController : public APlayerController
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API AALSPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 

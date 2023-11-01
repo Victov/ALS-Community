@@ -16,7 +16,7 @@ class UCapsuleComponent;
  * Math library functions for ALS
  */
 UCLASS()
-class ALSV4_CPP_API UALSMathLibrary : public UBlueprintFunctionLibrary
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSMathLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 

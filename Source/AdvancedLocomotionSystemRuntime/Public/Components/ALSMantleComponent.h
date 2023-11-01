@@ -16,7 +16,7 @@ class UALSDebugComponent;
 
 
 UCLASS(Blueprintable, BlueprintType)
-class ALSV4_CPP_API UALSMantleComponent : public UActorComponent
+class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSMantleComponent : public UActorComponent
 {
 	GENERATED_BODY()
 

@@ -9,7 +9,7 @@
 	"CreatedByURL": "https://github.com/dyanikoglu",
 	"DocsURL": "https://github.com/dyanikoglu/ALS-Community",
 	"SupportURL": "https://github.com/dyanikoglu/ALS-Community/issues",
-	"EngineVersion": "5.1",
+	"EngineVersion": "5.3",
 	"EnabledByDefault": true,
 	"CanContainContent": true,
 	"IsBetaVersion": false,
@@ -17,7 +17,7 @@
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "ALSV4_CPP",
+			"Name": "AdvancedLocomotionSystemRuntime",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
