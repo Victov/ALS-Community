@@ -1187,11 +1187,14 @@ float AALSBaseCharacter::CalculateGroundedRotationRate() const
 	// Using the curve in conjunction with the mapped speed gives you a high level of control over the rotation
 	// rates for each speed. Increase the speed if the camera is rotating quickly for more responsive rotation.
 
-	const float MappedSpeedVal = MyCharacterMovementComponent->GetMappedSpeed();
-	const float CurveVal =
-		MyCharacterMovementComponent->CurrentMovementSettings.RotationRateCurve->GetFloatValue(MappedSpeedVal);
-	const float ClampedAimYawRate = FMath::GetMappedRangeValueClamped<float, float>({0.0f, 300.0f}, {1.0f, 3.0f}, AimYawRate);
-	return CurveVal * ClampedAimYawRate;
+	if (ensure(IsValid(MyCharacterMovementComponent) && ensure(IsValid(MyCharacterMovementComponent->CurrentMovementSettings.RotationRateCurve))))
+	{
+		const float MappedSpeedVal = MyCharacterMovementComponent->GetMappedSpeed();
+		const float CurveVal = MyCharacterMovementComponent->CurrentMovementSettings.RotationRateCurve->GetFloatValue(MappedSpeedVal);
+		const float ClampedAimYawRate = FMath::GetMappedRangeValueClamped<float, float>({ 0.0f, 300.0f }, { 1.0f, 3.0f }, AimYawRate);
+		return CurveVal * ClampedAimYawRate;
+	}
+	return 0.0f;
 }
 
 void AALSBaseCharacter::LimitRotation(float AimYawMin, float AimYawMax, float InterpSpeed, float DeltaTime)

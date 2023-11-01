@@ -4,6 +4,7 @@ ORIGINAL README CONTENTS BELOW
 This fork roughly contains the following modifications:
 - Bring plugin up to date for UE5.3
 - Improve code quality/readability by removing abbreviations and/or useless information where applicable.
+- Crashproofing. Making configuration mistakes should never lead to crashes.
 
 
 # Advanced Locomotion System - Community Version
