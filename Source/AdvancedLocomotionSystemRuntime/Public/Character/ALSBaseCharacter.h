@@ -229,8 +229,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "ALS|Movement System")
 	EALSGait GetActualGait(EALSGait AllowedGait) const;
 
+	/* Whether we can continue sprinting when we are already sprinting */
 	UFUNCTION(BlueprintCallable, Category = "ALS|Movement System")
 	virtual bool CanSprint() const;
+
+	/* Whether we can start sprinting when we weren't before. */
+	UFUNCTION(BlueprintCallable, Category = "ALS|Movement System")
+	virtual bool CanStartSprint() const;
 
 	/** BP implementable function that called when Breakfall starts */
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "ALS|Movement System")

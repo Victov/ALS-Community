@@ -588,6 +588,12 @@ bool AALSBaseCharacter::CanSprint() const
 	return false;
 }
 
+bool AALSBaseCharacter::CanStartSprint() const
+{
+	// By default, we can always start sprinting. This just exists to let game code override it.
+	return CanSprint();
+}
+
 FVector AALSBaseCharacter::GetMovementInput() const
 {
 	return ReplicatedCurrentAcceleration;
@@ -1129,7 +1135,14 @@ EALSGait AALSBaseCharacter::GetAllowedGait() const
 		{
 			if (DesiredGait == EALSGait::Sprinting)
 			{
-				return CanSprint() ? EALSGait::Sprinting : EALSGait::Running;
+				if (GetGait() == EALSGait::Sprinting)
+				{
+					return CanSprint() ? EALSGait::Sprinting : EALSGait::Running;
+				}
+				else
+				{
+					return CanStartSprint() ? EALSGait::Sprinting : EALSGait::Running;
+				}
 			}
 			return DesiredGait;
 		}
