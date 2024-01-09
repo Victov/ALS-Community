@@ -34,7 +34,7 @@ AALSBaseCharacter::AALSBaseCharacter(const FObjectInitializer& ObjectInitializer
 	: Super(ObjectInitializer.SetDefaultSubobjectClass<UALSCharacterMovementComponent>(CharacterMovementComponentName))
 {
 	PrimaryActorTick.bCanEverTick = true;
-	bUseControllerRotationYaw = 0;
+	bUseControllerRotationYaw = false;
 	bReplicates = true;
 	SetReplicatingMovement(true);
 }
