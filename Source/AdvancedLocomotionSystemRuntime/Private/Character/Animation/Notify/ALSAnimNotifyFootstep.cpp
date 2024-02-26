@@ -1,20 +1,22 @@
 // Copyright:       Copyright (C) 2022 Doğa Can Yanıkoğlu
 // Source Code:     https://github.com/dyanikoglu/ALS-Community
 
-
+// This class
 #include "Character/Animation/Notify/ALSAnimNotifyFootstep.h"
 
+// Engine
 #include "Animation/AnimInstance.h"
 #include "Components/AudioComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-
 #include "Engine/DataTable.h"
 #include "Kismet/KismetSystemLibrary.h"
-#include "Library/ALSCharacterStructLibrary.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 #include "NiagaraSystem.h"
 #include "NiagaraFunctionLibrary.h"
 
+// Plugin
+#include "ALSGameSettings.h"
+#include "Library/ALSCharacterStructLibrary.h"
 
 const FName NAME_Mask_FootstepSound(TEXT("Mask_FootstepSound"));
 
@@ -36,6 +38,8 @@ void UALSAnimNotifyFootstep::Notify(USkeletalMeshComponent* MeshComp, UAnimSeque
 	{
 		return;
 	}
+
+	UDataTable* HitDataTable = GetDefault<UALSGameSettings>()->HitDataTable.LoadSynchronous();
 
 	if (HitDataTable)
 	{

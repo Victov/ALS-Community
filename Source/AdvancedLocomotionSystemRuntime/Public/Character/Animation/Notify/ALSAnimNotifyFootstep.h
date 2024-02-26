@@ -26,8 +26,6 @@ class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSAnimNotifyFootstep : public UAnimN
 	virtual FString GetNotifyName_Implementation() const override;
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings")
-	TObjectPtr<UDataTable> HitDataTable;
 
 	static FName NAME_Foot_R;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Socket")

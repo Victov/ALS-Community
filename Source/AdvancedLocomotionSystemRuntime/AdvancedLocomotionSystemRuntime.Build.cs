@@ -13,6 +13,7 @@ public class AdvancedLocomotionSystemRuntime : ModuleRules
 		{
 			"Core",
 			"CoreUObject",
+			"DeveloperSettings",
 			"Engine",
 			"InputCore",
 			"NavigationSystem",
