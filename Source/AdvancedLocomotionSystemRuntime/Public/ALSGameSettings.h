@@ -9,7 +9,7 @@
 /**
  * Game-specific settings related to the Advanced Locomotion System
  */
-UCLASS(Config = Game)
+UCLASS(Config = Game, DefaultConfig)
 class ADVANCEDLOCOMOTIONSYSTEMRUNTIME_API UALSGameSettings : public UDeveloperSettings
 {
 	GENERATED_BODY()
